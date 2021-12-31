@@ -6,6 +6,6 @@ from django.utils import timezone
 # As views conectam modelos com templates
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    posts = Post.objects.all()
     return render(request, 'blog/post_list.html', {'posts':posts})
     
