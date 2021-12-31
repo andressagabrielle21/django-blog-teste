@@ -11,7 +11,18 @@
 <body>
 
     <h1>FALA TU, TERRÁQUEOS</h1>
-    <h3>it might be working</h3>
+
+    <br>
+    <hr>
+    <br>
+
+    {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2> <a href=""> {{ post.title}} </a></h2>
+        <p> {{ post.text|linebreaksbr }} </p>
+    </div>
+    {% endfor %}
 
 </body>
 
